@@ -6,7 +6,9 @@ function extrairLinks(texto) {
   const capturas = [...texto.matchAll(regex)];
   const resultados = capturas.map((captura) => ({ [captura[1]]: captura[2] }));
 
-  return resultados.length !== 0 ? resultados : chalk.bgRed("\nNão há links no arquivo.");
+  return resultados.length !== 0
+    ? resultados
+    : chalk.bgRed("\nNão há links no arquivo.");
 }
 
 function tratarErro(erro) {
