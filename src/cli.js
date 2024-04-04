@@ -14,6 +14,8 @@ function imprimirLista(resultado, identificador = "") {
 
 async function processarTexto(argumentos) {
   const caminho = argumentos[2];
+  const valida = argumentos[3];
+  console.log(valida);
 
   try {
     fs.lstatSync(caminho);
