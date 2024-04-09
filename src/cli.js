@@ -5,12 +5,12 @@ import fs from "fs";
 
 const caminho = process.argv;
 
-function imprimirLista(valida, resultado, identificador = "") {
+async function imprimirLista(valida, resultado, identificador = "") {
   if (valida) {
     console.log(
       chalk.yellow("Lista validada:"),
       chalk.black.bgGreen(identificador),
-      listaValidada(resultado)
+      await listaValidada(resultado)
     );
   } else {
     console.log(
